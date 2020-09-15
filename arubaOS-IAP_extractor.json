@@ -1,0 +1,47 @@
+{
+  "extractors": [
+    {
+      "title": "Last chance extractor",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 1,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{YEAR:year} %{IPV4:source} %{GREEDYDATA:message} "
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Main extractor",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{YEAR} %{IP} AP:%{HOSTNAME:source} <%{IP:ip} %{MAC:mac}> %{DATA:Daemon}: %{GREEDYDATA:message}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Secondary extractor",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{YEAR} %{IP} %{DATA:Daemon}: <%{DATA:segment_number}> <AP:%{HOSTNAME:source} <%{IP} %{MAC}> %{DATA:Daemon}: %{GREEDYDATA:message}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    }
+  ],
+  "version": "3.3.5"
+}
