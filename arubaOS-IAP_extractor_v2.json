@@ -15,7 +15,7 @@
       "condition_value": ""
     },
     {
-      "title": "Non-standrard messages (no severity) (no error number)",
+      "title": "Non-standard messages (no severity) (no error number)",
       "extractor_type": "grok",
       "converters": [],
       "order": 0,
