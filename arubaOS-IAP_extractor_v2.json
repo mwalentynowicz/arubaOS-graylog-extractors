@@ -1,0 +1,33 @@
+{
+  "extractors": [
+    {
+      "title": "Based on ArubaInstant 6.4.3.x Syslog Messages References Guide",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "<%{INT:code_1}>%{DATA:timestamp} %{IPV4:source} %{DATA:error_location}: <%{INT:error_number}> <%{DATA:severity}> AP:%{DATA:hostname_name} <%{IPV4:hostname_ip} %{COMMONMAC:ap_mac}> %{GREEDYDATA:message}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Non-standrard messages (no severity) (no error number)",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "<%{INT:code_1}>%{DATA:timestamp} %{IPV4:source} AP:%{DATA:hostname_name} <%{IPV4:hostname_ip} %{COMMONMAC:ap_mac}> %{DATA:error_location}: %{GREEDYDATA:message}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    }
+  ],
+  "version": "3.3.5"
+}
