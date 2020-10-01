@@ -9,7 +9,7 @@
       "source_field": "message",
       "target_field": "",
       "extractor_config": {
-        "grok_pattern": "<%{INT:code_1}>%{DATA:timestamp} %{IPV4:source} %{DATA:error_location}: <%{INT:error_number}> <%{DATA:severity}> AP:%{DATA:hostname_name} <%{IPV4:hostname_ip} %{COMMONMAC:ap_mac}> %{GREEDYDATA:message}"
+        "grok_pattern": "<%{INT:code_1}>%{DATA:timestamp} %{IPV4:hostname_ip} %{DATA:error_location}: <%{INT:error_number}> <%{DATA:severity}> AP:%{HOSTNAME:source} <%{IPV4:hostname_ip} %{COMMONMAC:ap_mac}> %{GREEDYDATA:message}"
       },
       "condition_type": "none",
       "condition_value": ""
@@ -23,7 +23,7 @@
       "source_field": "message",
       "target_field": "",
       "extractor_config": {
-        "grok_pattern": "<%{INT:code_1}>%{DATA:timestamp} %{IPV4:source} AP:%{DATA:hostname_name} <%{IPV4:hostname_ip} %{COMMONMAC:ap_mac}> %{DATA:error_location}: %{GREEDYDATA:message}"
+        "grok_pattern": "<%{INT:code_1}>%{DATA:timestamp} %{IPV4:hostname_ip} AP:%{HOSTNAME:source} <%{IPV4:hostname_ip} %{COMMONMAC:ap_mac}> %{DATA:error_location}: %{GREEDYDATA:message}"
       },
       "condition_type": "none",
       "condition_value": ""
