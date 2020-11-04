@@ -1,0 +1,33 @@
+{
+  "extractors": [
+    {
+      "title": "Ext1 (space after code)",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "<%{INT:code_1}> %{MONTH:month} ?%{BASE10NUM:day} %{TIME:time} %{HOSTNAME:source} %{GREEDYDATA:message}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Ext2 (no space)",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "<%{INT:code_1}>%{MONTH:month} ?%{BASE10NUM:day} %{TIME:time} %{HOSTNAME:source} %{GREEDYDATA:message}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    }
+  ],
+  "version": "3.3.8"
+}
