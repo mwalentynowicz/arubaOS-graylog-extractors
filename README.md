@@ -10,5 +10,6 @@ Extractors used for:
 Choose System/Inputs -> Inputs
 Find input, where you have messages from Aruba devices.
 Click "Manage Extractors" next choose Actions -> import and paste content of .json file.
+Input should be setted as "RAW Text".
 
 ###### Input Type - Syslog | Extractor Type - Grok pattern ###
