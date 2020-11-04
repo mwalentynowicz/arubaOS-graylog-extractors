@@ -15,7 +15,7 @@
       "condition_value": ""
     },
     {
-      "title": "Ext2 (no space)",
+      "title": "Ext2 (no space after code)",
       "extractor_type": "grok",
       "converters": [],
       "order": 0,

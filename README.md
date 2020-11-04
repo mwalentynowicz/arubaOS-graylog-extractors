@@ -1,8 +1,14 @@
-# arubaOS-graylog-extractors
-Graylog's extractors for ArubaOS
+Graylog's Extractors for Aruba Devices
+======================================
 
 Extractors used for:
-* ArubaOS AP - IAP325, IAP228, IAP318
-* ArubaOS Switches - Aruba/HP 2530/2540, 54xx
+* Aruba AP - IAP325, IAP228, IAP318
+* Aruba Switches - Aruba/HP 2530/2540, 54xx
+
+### Usage
+
+Choose System/Inputs -> Inputs
+Find input, where you have messages from Aruba devices.
+Click "Manage Extractors" next choose Actions -> import and paste content of .json file.
 
 ###### Input Type - Syslog | Extractor Type - Grok pattern ###
