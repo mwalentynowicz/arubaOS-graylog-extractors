@@ -1,7 +1,7 @@
 {
   "extractors": [
     {
-      "title": "Ext1 (space after code)",
+      "title": "Ext1 (space after code / 2 digit day of the month)",
       "extractor_type": "grok",
       "converters": [],
       "order": 0,
@@ -15,7 +15,7 @@
       "condition_value": ""
     },
     {
-      "title": "Ext2 (no space after code)",
+      "title": "Ext2 (no space after code / 2 digit day of the month)",
       "extractor_type": "grok",
       "converters": [],
       "order": 0,
@@ -29,7 +29,7 @@
       "condition_value": ""
     },
     {
-      "title": "Ext3 (space after code + testing against 1 digit day number)",
+      "title": "Ext3 (space after code / 1 digit day of the month)",
       "extractor_type": "grok",
       "converters": [],
       "order": 0,
@@ -43,7 +43,7 @@
       "condition_value": ""
     },
     {
-      "title": "Ext4 (no space after code + testing against 1 digit day number)",
+      "title": "Ext4 (no space after code / 1 digit day of the month)",
       "extractor_type": "grok",
       "converters": [],
       "order": 0,
